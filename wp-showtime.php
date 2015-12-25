@@ -43,7 +43,7 @@ function wp_showtime_action_links($links)
 
 function wp_showtime_menu()
 {
-    add_options_page('WP Showtime Options', 'WP Showtime', 'manage_options', 'wp-showtime', 'tp_manage_menu');
+    add_options_page('WP Showtime', 'WP Showtime', 'manage_options', 'wp-showtime', 'tp_manage_menu');
 }
 
 add_shortcode('showtime', 'show_showtime');
