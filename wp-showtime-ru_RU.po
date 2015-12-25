@@ -1,0 +1,59 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Showtime 1.1\n"
+"POT-Creation-Date: 2015-12-25 15:03+0300\n"
+"PO-Revision-Date: 2015-12-25 15:35+0300\n"
+"Last-Translator: \n"
+"Language-Team: sergey@tsepelev.ru\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: _e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: wp-showtime.php\n"
+"X-Poedit-SearchPath-2: wp-showtime-func.php\n"
+"X-Poedit-SearchPath-3: wp-showtime-opt.php\n"
+
+#: wp-showtime-opt.php:12
+msgid "Settings Wp Showtime Plugin"
+msgstr "Настройки плагина WP Showtime"
+
+#: wp-showtime-opt.php:14
+msgid "Place <kbd>[showtime]</kbd> in your post or page body."
+msgstr "Поместите шорткод <kbd>[showtime]</kbd> в тело поста или страницы."
+
+#: wp-showtime-opt.php:21
+msgid "Enter the default city"
+msgstr "Укажите город по умолчанию"
+
+#: wp-showtime-opt.php:29
+msgid "Language"
+msgstr "Язык"
+
+#: wp-showtime-opt.php:43
+msgid "Entry form city"
+msgstr "Поле ввода города"
+
+#: wp-showtime-opt.php:46
+msgid "Show any entry form of the city on the page with showtimes."
+msgstr "Показывать форму ввода города на странице с расписаниями сеансов?"
+
+#: wp-showtime-opt.php:49
+msgid "Show as table"
+msgstr "Показать в виде таблицы"
+
+#: wp-showtime-opt.php:52
+msgid "Show list of film shows in a table."
+msgstr "Показывать список киносеансов в виде таблицы?"
+
+#: wp-showtime-opt.php:57
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#~ msgid "Place <strong>[showtime]</strong> in your post or page body."
+#~ msgstr "Поместите шорткод <kbd>[showtime]</kbd> в тело поста или страницы."
