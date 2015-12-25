@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Showtime 1.1\n"
-"POT-Creation-Date: 2015-12-25 15:03+0300\n"
-"PO-Revision-Date: 2015-12-25 15:35+0300\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2015-12-25 16:32+0300\n"
+"PO-Revision-Date: 2015-12-25 16:32+0300\n"
+"Last-Translator: Sergey Tsepelev <sergey@tsepelev.ru>\n"
 "Language-Team: sergey@tsepelev.ru\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
@@ -31,27 +31,27 @@ msgstr "Поместите шорткод <kbd>[showtime]</kbd> в тело по
 msgid "Enter the default city"
 msgstr "Укажите город по умолчанию"
 
-#: wp-showtime-opt.php:29
+#: wp-showtime-opt.php:30
 msgid "Language"
 msgstr "Язык"
 
-#: wp-showtime-opt.php:43
+#: wp-showtime-opt.php:44
 msgid "Entry form city"
 msgstr "Поле ввода города"
 
-#: wp-showtime-opt.php:46
+#: wp-showtime-opt.php:47
 msgid "Show any entry form of the city on the page with showtimes."
 msgstr "Показывать форму ввода города на странице с расписаниями сеансов?"
 
-#: wp-showtime-opt.php:49
+#: wp-showtime-opt.php:51
 msgid "Show as table"
 msgstr "Показать в виде таблицы"
 
-#: wp-showtime-opt.php:52
+#: wp-showtime-opt.php:54
 msgid "Show list of film shows in a table."
 msgstr "Показывать список киносеансов в виде таблицы?"
 
-#: wp-showtime-opt.php:57
+#: wp-showtime-opt.php:61
 msgid "Save Changes"
 msgstr "Сохранить изменения"
 
