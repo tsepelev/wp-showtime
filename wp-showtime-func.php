@@ -1,11 +1,13 @@
 <?php if (get_option('showtime_showform') == 1) { ?>
     <div>
         <form method="get">
-            <p>Город или индекс: <input type="text" size="50" name="location"
-                                        value="<?php echo formatstr($_GET["location"]); ?>"/></p>
+            <p><label><?php _e('Enter the name of the city:', 'wp-showtime') ?> <input type="text" size="50"
+                                                                                       name="location"
+                                                                                       value="<?php echo formatstr($_GET["location"]); ?>"/></label>
+            </p>
 
             <p><input
-                    type="submit" value="Показать"/></p>
+                    type="submit" value="<?php _e('GO!', 'wp-showtime') ?>"/></p>
 
         </form>
     </div>
@@ -103,12 +105,14 @@ if (!empty($rasp)) { ?>
 $showcit = urlencode(get_option('showtime_city'));
 include_once('simple_html_dom.php');
 
-$html = new simple_html_dom();
+//$html = new simple_html_dom();
 $gorod = formatstr($_GET["location"]);
+$lang = substr(get_bloginfo('language'), 0, 2);
+
 if (!empty($gorod)) {
-    $html->load_file('http://www.google.com/movies?mid=&hl=ru&near=' . $cit . '&date=' . $dat);
+    $html = file_get_html('http://www.google.com/movies?mid=&hl=' . $lang . '&near=' . $cit . '&date=' . $dat);
 } else {
-    $html->load_file('http://www.google.com/movies?mid=&hl=ru&near=' . $showcit . '&date=' . $dat);
+    $html = file_get_html('http://www.google.com/movies?mid=&hl=' . $lang . '&near=' . $showcit . '&date=' . $dat);
 }
 
 
@@ -117,25 +121,25 @@ foreach ($html->find('#movie_results .theater') as $div) {
         ?>
         <div class="theater">
             <div>
-                <h3>Кинотеатр: <?php echo iconv('Windows-1251', 'UTF-8', $div->find('h2', 0)->plaintext); ?></h3>
+                <h3><?php echo iconv('Windows-1251', 'UTF-8', $div->find('h2.name', 0)->plaintext); ?></h3>
 
-                <p>Адрес и телефон: <?php echo iconv('Windows-1251', 'UTF-8', $div->find('.info', 0)->innertext); ?></p>
+                <p><?php echo iconv('Windows-1251', 'UTF-8', $div->find('.info', 0)->innertext); ?></p>
             </div>
             <?php
 
             // print all the movies with showtimes
             foreach ($div->find('.movie') as $movie) {
                 ?>
-                <div class="kino">
-                    <p><b>Фильм: <a
+                <div class="kino" style="border-bottom: solid 1px #e9e9e9; margin-bottom: 20px">
+                    <p><strong><a
                                 href="http://www.google.com/search?hl=ru&source=hp&q=<?php echo iconv('Windows-1251', 'UTF-8', $movie->find('.name a', 0)->innertext); ?>+site%3Akinopoisk.ru&btnI=I%27m+Feeling+Lucky"
-                                target="_blank"><?php echo iconv('Windows-1251', 'UTF-8', $movie->find('.name a', 0)->innertext); ?></a></b>
+                                target="_blank"><?php echo iconv('Windows-1251', 'UTF-8', $movie->find('.name a', 0)->innertext); ?></a></strong>
                     </p>
 
-                    <p>Информация: <?php echo iconv('Windows-1251', 'UTF-8', $movie->find('.info', 0)->plaintext); ?></p>
+                    <p><?php echo iconv('Windows-1251', 'UTF-8', $movie->find('.info', 0)->plaintext); ?></p>
 
-                    <p>Сеансы: <?php echo iconv('Windows-1251', 'UTF-8', $movie->find('.times', 0)->plaintext); ?></p>
-                    <br></div>
+                    <p><?php echo trim(iconv('Windows-1251', 'UTF-8', $movie->find('.times', 0)->plaintext)); ?></p>
+                </div>
                 <?php
             }
             ?>
@@ -153,9 +157,9 @@ foreach ($html->find('#movie_results .theater') as $div) {
         <table>
             <thead>
             <tr>
-                <th>Название фильма</th>
-                <th>Информация</th>
-                <th>Сеансы</th>
+                <th><?php _e('Movie title', 'wp-showtime'); ?></th>
+                <th><?php _e('Information', 'wp-showtime'); ?></th>
+                <th><?php _e('Movie Showtimes', 'wp-showtime'); ?></th>
             </tr>
             </thead>
             <?php
