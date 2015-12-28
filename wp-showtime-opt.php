@@ -27,20 +27,6 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row"><label for="lang"><?php _e('Language', 'wp-showtime') ?></label></th>
-                <td>
-                    <select name="showtime_lang" id="lang">
-                        <option <?php if (get_option('showtime_lang') == 'ru'): echo 'selected'; endif ?>
-                            value="ru">Русский
-                        </option>
-                        <option
-                            <?php if (get_option('showtime_lang') == 'en'): echo 'selected'; endif ?>
-                            value="en">Английский
-                        </option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
                 <th scope="row"><?php _e('Entry form city', 'wp-showtime') ?></th>
                 <td><label for="showform"><input type="checkbox" id="showform"
                                                  name="showtime_showform" <?php if (get_option('showtime_showform') == 1): echo "checked"; endif ?>
@@ -61,7 +47,7 @@
                    value="<?php _e('Save Changes', 'wp-showtime') ?>">
         </p>
         <input type="hidden" name="action" value="update"> <input type="hidden" name="page_options"
-                                                                  value="showtime_city,showtime_lang,showtime_showform,showtime_showtable">
+                                                                  value="showtime_city,showtime_showform,showtime_showtable">
     </form>
 </div>
 
