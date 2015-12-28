@@ -1,11 +1,11 @@
 # WP Showtime
 
-Contributors: tsepelev
-Donate link: http://tsepelev.ru/
-Tags: movies, showtime, movie showtimes
-Requires at least: 2.7
-Tested up to: 3.0.1
-Stable tag: 4.3
+* Contributors: tsepelev
+* Donate link: http://tsepelev.ru/
+* Tags: movies, showtime, movie showtimes
+* Requires at least: 2.7
+* Tested up to: 4.4
+* Stable tag: 4.4
 
 The plugin allows you to display on any page of your blog movie showtimes. There is the possibility showtimes for any city.
 
@@ -25,7 +25,7 @@ Demonstration of the plugin can be found at http://pro-kino.com/today-in-the-cin
 
 To do this, go to the plugin WP Showtime and in the `City or post code`, enter your location, such as `Moscow` or `London`.
 
-## Changelog
+### Changelog
 
-### 1.0
+#### 1.0
 * Release plugin.
