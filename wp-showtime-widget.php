@@ -49,9 +49,9 @@ class WP_Showtime extends WP_Widget
             echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
         }
         if (!empty($instance['id'])) {
-            $mid = $args['before_id'] . apply_filters('widget_id', $instance['id']) . $args['after_id'];
+            $mid = apply_filters('widget_id', $instance['id']);
             $lang = substr(get_bloginfo('language'), 0, 2);
-            $html = file_get_html('http://www.google.com/movies?hl=' . $lang . '&tid=' . $mid);
+            $html = @file_get_html('http://www.google.com/movies?hl=' . $lang . '&tid=' . $mid);
             foreach ($html->find('#movie_results .theater') as $div) {
                 ?>
                 <div>
